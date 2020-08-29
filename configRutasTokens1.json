@@ -1,0 +1,137 @@
+{
+  "informacion": [
+    {
+      "archivoOrigen": "{NameCrud}Controller.cs",
+      "rutaFinal": "/Platform.GUI/Controllers/{Folder}/",
+      "tokens": [
+        "{NameCrud}",
+        "{ControllerCrud}",
+        "{Folder}"
+      ]
+    },
+    {
+      "archivoOrigen": "{NameCrud}MapperGUI.cs",
+      "rutaFinal": "/Platform.GUI/Mappers/{Folder}/",
+      "tokens": [
+        "{NameCrud}",
+        "{ClassCrud}",
+        "{Folder}"
+      ]
+    },
+    {
+      "archivoOrigen": "{NameCrud}Model.cs",
+      "rutaFinal": "/Platform.GUI/Models/{Folder}/",
+      "tokens": [
+        "{NameCrud}",
+        "{NameCrudLower}",
+        "{ModelCrud}",
+        "{Folder}"
+      ]
+    },
+    {
+      "archivoOrigen": "Create.cshtml",
+      "rutaFinal": "/Platform.GUI/Views/{NameCrud}/",
+      "tokens": [
+        "{NameCrud}",
+        "{Folder}",
+        "{CreateCrud}",
+        "{FormId}"
+      ]
+    },
+    {
+      "archivoOrigen": "Edit.cshtml",
+      "rutaFinal": "/Platform.GUI/Views/{NameCrud}/",
+      "tokens": [
+        "{Folder}",
+        "{NameCrud}",
+        "{FormId}",
+        "{EditCrud}"
+      ]
+    },
+    {
+      "archivoOrigen": "Index.cshtml",
+      "rutaFinal": "/Platform.GUI/Views/{NameCrud}/",
+      "tokens": [
+        "{NameCrud}",
+        "{Folder}",
+        "{IndexCrud}",
+        "{FormId}",
+        "{IndexDisplayName}"
+      ]
+    },
+    {
+      "archivoOrigen": "{NameCrud}DbModel.cs",
+      "rutaFinal": "/Repository.Contracts/DBModels/{Folder}/",
+      "tokens": [
+        "{NameCrud}",
+        "{ModelDB}",
+        "{Folder}"
+      ]
+    },
+    {
+      "archivoOrigen": "I{NameCrud}Repository.cs",
+      "rutaFinal": "/Repository.Contracts/Interfaces/{Folder}/",
+      "tokens": [
+        "{NameCrud}",
+        "{Folder}"
+      ]
+    },
+    {
+      "archivoOrigen": "{NameCrud}MapperRepository.cs",
+      "rutaFinal": "/Repository.Platform.Implementation/Mappers/{Folder}/",
+      "tokens": [
+        "{NameCrud}",
+        "{ClassCrudDB}",
+        "{ClassDBCrud}",
+        "{NameTableDB}",
+        "{Folder}"
+      ]
+    },
+    {
+      "archivoOrigen": "{NameCrud}DTO.cs",
+      "rutaFinal": "/Application.Contracts/DTO/{Folder}/",
+      "tokens": [
+        "{NameCrud}",
+        "{ModelDB}",
+        "{Folder}"
+      ]
+    },
+    {
+      "archivoOrigen": "I{NameCrud}App.cs",
+      "rutaFinal": "/Application.Contracts/Interfaces/{Folder}/",
+      "tokens": [
+        "{NameCrud}",
+        "{Folder}"
+      ]
+    },
+    {
+      "archivoOrigen": "{NameCrud}ImplApp.cs",
+      "rutaFinal": "/Application.Implementation/Impl/{Folder}/",
+      "tokens": [
+        "{NameCrud}",
+        "{Folder}"
+      ]
+    },
+    {
+      "archivoOrigen": "{NameCrud}MapperApp.cs",
+      "rutaFinal": "/Application.Implementation/Mappers/{Folder}/",
+      "tokens": [
+        "{NameCrud}",
+        "{ClassCrud}",
+        "{Folder}"
+      ]
+    },
+    {
+      "archivoOrigen": "{NameCrud}ImplRepository.cs",
+      "rutaFinal": "/Repository.Platform.Implementation/Impl/{Folder}/",
+      "tokens": [
+        "{NameCrud}",
+        "{AttributeID}",
+        "{AttributeSearch}",
+        "{NameDB}",
+        "{CrudBodyDB}",
+        "{Folder}"
+      ]
+    }
+  ]
+}

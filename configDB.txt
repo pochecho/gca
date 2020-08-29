@@ -1,0 +1,4 @@
+LAPTOP-MKFK3VN6\SQLEXPRESS
+uno
+sa
+sifamek666

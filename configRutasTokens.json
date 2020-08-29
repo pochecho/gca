@@ -1,0 +1,104 @@
+{
+    "informacion": [{
+            "archivoOrigen": "Routes.php",
+            "rutaFinal": "/routes/routes/{Folder}/",
+            "tokens": [
+                "{NameCrud}",
+                "{NameCrudCapitalize}",
+                "{Folder}"
+            ]
+        },
+        {
+            "archivoOrigen": "{NameCrud}Copies.php",
+            "rutaFinal": "/resources/lang/es_AR/{Folder}/",
+            "tokens": [
+                "{NameCrud}",
+                "{CrudCopies}"
+            ]
+        },
+
+        {
+            "archivoOrigen": "{NameCrudCapitalize}Controller.php",
+            "rutaFinal": "/app/Http/Controllers/{Folder}/",
+            "tokens": [
+                "{NameCrud}",
+                "{NameCrudCapitalize}",
+                "{NameCrudUpper}",
+                "{ControllerCrud}",
+                "{RulesValidator}",
+                "{EditColumnDataTable}",
+                "{CrudBodyDB}",
+                "{Attributes}",
+                "{Folder}"
+            ]
+        },
+        {
+            "archivoOrigen": "{NameCrudCapitalize}Model.php",
+            "rutaFinal": "/app/Models/{Folder}/",
+            "tokens": [
+                "{NameCrud}",
+                "{NameDB}",
+                "{NameCrudCapitalize}",
+                "{Folder}",
+                "{AttributeID}"
+            ]
+        },
+
+        {
+            "archivoOrigen": "{NameCrudCapitalize}Index.blade.php",
+            "rutaFinal": "/resources/views/{Folder}/",
+            "tokens": [
+                "{NameCrud}",
+                "{NameCrudCapitalize}",
+                "{NameCrudLower}",
+                "{DataTableModelCrud}",
+                "{NameCrudTable}",
+                "{ToMap}",
+                "{Map}",
+                "{ModelDB}",
+                "{Folder}"
+            ]
+        },
+        {
+            "archivoOrigen": "{NameCrudCapitalize}Create.blade.php",
+            "rutaFinal": "/resources/views/{Folder}/",
+            "tokens": [
+                "{NameCrud}",
+                "{NameCrudLower}",
+                "{NameCrudCreate}",
+                "{ToMap}",
+                "{Map}",
+                "{ModelDB}",
+                "{Folder}"
+            ]
+        },
+        {
+            "archivoOrigen": "{NameCrudCapitalize}Edit.blade.php",
+            "rutaFinal": "/resources/views/{Folder}/",
+            "tokens": [
+                "{NameCrud}",
+                "{NameCrudLower}",
+                "{NameCrudEdit}",
+
+                "{ToMap}",
+                "{Map}",
+                "{ModelDB}",
+                "{Folder}"
+            ]
+        },
+
+
+
+        {
+            "archivoOrigen": "{NameCrudCapitalize}.js",
+            "rutaFinal": "/public/js/{Folder}/",
+            "tokens": [
+                "{NameCrud}",
+                "{NameCrudTable}",
+                "{DataTableColumns}",
+                "{DataTableGeneralColumns}",
+                "{DataTableAuditColumns}"
+            ]
+        }
+    ]
+}

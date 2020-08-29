@@ -1,0 +1,4 @@
+'{NameCrud}' => [
+
+{CrudCopies}
+    ],
