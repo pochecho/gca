@@ -1,0 +1,12 @@
+{
+    "informacion": [{
+            "archivoOrigen": "Routes.php",
+            "rutaFinal": "/routes/routes/{Folder}/",
+            "tokens": [
+                "{NameCrud}",
+                "{NameCrudCapitalize}",
+                "{Folder}"
+            ]
+        }
+    ]
+}

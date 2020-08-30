@@ -1,0 +1,8 @@
+bg = "white"
+fg = "#3180FF"
+bg2 = "#eee"
+fg2 = "black"
+bgb1 = "#3180FF"
+fgb1 = "white"
+bgb2 = "#FF2300"
+fgb2 = "white"
