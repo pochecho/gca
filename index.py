@@ -1,5 +1,5 @@
-from features.code_generator.access.tkinter.view.code_generator_view import IndexView
+from features.file_generator.access.tkinter.view.file_generator_view import IndexView
 
-index = IndexView(1050, 600)
+index = IndexView(800, 600)
 
 index.init()

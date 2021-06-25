@@ -1,0 +1,7 @@
+{
+    "name": "vehicle",
+    "name-plural": "vehicles",
+    "display-name": "Vehículo",
+    "folder": "Vehicle",
+    "widget-name": "layout-bds-widget"
+  }

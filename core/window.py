@@ -5,13 +5,13 @@ from tkinter.ttk import *
 class Window:
 	def __init__(self, width, height):
 		self.window = Tk()
-		self.width = width
-		self.height = height
+		# self.width = width
+		# self.height = height
 		self.configure_button_styles()
 		self.config_window()
 
 	def config_window(self):
-		self.window.geometry(str(self.width)+"x"+str(self.height))
+		# self.window.geometry(str(self.width)+"x"+str(self.height))
 		self.window.configure(bg=bg)
 
 	def init(self):

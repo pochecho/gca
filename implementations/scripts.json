@@ -1,0 +1,4 @@
+{
+  "pre": ["py ../scripts/update_angular_json.py {[NameWidgetTypeFile]}"],
+  "post": []
+}
