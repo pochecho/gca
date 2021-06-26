@@ -1,7 +1,6 @@
 import json
 import os
 class CodeGeneratorUseCase:
-    """docstring for generadorArchivos"""
 
     def __call__(self,model,template,functions):
         """

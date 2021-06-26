@@ -1,0 +1,42 @@
+{
+	"name": "BcAcordeon",
+	"description": "<p>El BcAcordeon se usa para mostrar información en diferentes grupos, de forma ordenada.</p>",
+	"attributes": [
+		{
+			"name": "title",
+			"type": "String",
+			"required": true,
+			"description": "<p>Hace referencia al titulo del acordeon.</p>"
+		},
+		{
+			"name": "children",
+			"type": "List<Widget>",
+			"required": true,
+			"description": "<p>widget que tendrá el contenido despleganle.</p>"
+		},
+		{
+			"name": "initiallyExpanded",
+			"type": "bool",
+			"required": false,
+			"description": "<p>Hace referencia si inicia desplegado.</p>"
+		},
+		{
+			"name": "icon",
+			"type": "IconData",
+			"required": false,
+			"description": "<p>Hace referencia al icono de la izquierda de tipo Brand.</p>"
+		},
+		{
+			"name": "enableIcon",
+			"type": "bool",
+			"required": false,
+			"description": "<p>Determina la visibilidad del icono de la izquierda.</p>"
+		},
+		{
+			"name": "onTap",
+			"type": "ValueChanged<bool?>?",
+			"required": false,
+			"description": "<p>Entrega el valor referente si se encuentra expandido o no el acordeón.</p>"
+		}
+	]
+}
