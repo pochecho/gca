@@ -1,13 +1,6 @@
 {
 	"Folder": "self.content = self.content.replace(\"{[Folder]}\",model.p('folder'))\n",
-	"NameWidgetTypeFile": "self.content = self.content.replace(\"{[NameWidgetTypeFile]}\",model.p('widget_name'))\n",
-	"NameWidgetTypeClass": "self.content = self.content.replace(\"{[NameWidgetTypeClass]}\",self.get_upper_camel_content(model.p('name')))\n",
+	"NameWidgetTypeFile": "self.content = self.content.replace(\"{[NameWidgetTypeFile]}\",model.p('widget-name'))\n",
 	"NameModelTypeFile": "_name = model.p('name').lower()\nself.content = self.content.replace(\"{[NameModelTypeFile]}\",_name)\n",
-	"NameModelTypeFilePlural": "self.content = self.content.replace(\"{[NameModelTypeFilePlural]}\",model.p('folder'))\n",
-	"ModelBasicViewModel": "self.content = self.content.replace(\"{[ModelBasicViewModel]}\",'')\n",
-	"NameModelTypeClass": "self.content = self.content.replace(\"{[NameModelTypeClass]}\",self.get_upper_camel_content(model.p('name')))\n",
-	"NameModelTypeProperty": "self.content = self.content.replace(\"{[NameModelTypeProperty]}\",self.get_lower_camel_content(model.p('name')))\n",
-	"PropertyDefinitions": "self.content = self.content.replace(\"{[PropertyDefinitions]}\",'')\n",
-	"MainPropertyDefinition": "self.content = self.content.replace(\"{[MainPropertyDefinition]}\",'id')\n",
-  "PropertyMappers":"self.content = self.content.replace(\"{[PropertyMappers]}\",'')\n"
+	"ModelBasicViewModel": "self.content = self.content.replace(\"{[ModelBasicViewModel]}\",'Ajáaaaaaa')\n"
 }
