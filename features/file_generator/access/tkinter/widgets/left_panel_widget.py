@@ -17,6 +17,8 @@ class LeftPanelWidget(Frame,WidgetBuilder):
     def _build(self):
         template = {
             'type':Frame,
+            'properties': {
+            },
             'children': [
                 {
                     'id': '{}.main_widget'.format(self.name),
@@ -49,7 +51,9 @@ class LeftPanelWidget(Frame,WidgetBuilder):
                                 'textvariable': self.status_var,
                                 'width': 10,
                                 'text': 'Eval',
-                                'command' : self.validate_json
+                                'command' : self.validate_json,
+                                'fg': 'white',
+                                'bg': '#900'
                             },
                             'grid': {
                                 'column': 1,

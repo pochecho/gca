@@ -17,6 +17,7 @@ class TabsWidget(Notebook,WidgetBuilder):
 
     def _build(self):
         template = {
+            
             'children': [
                 
                 {
@@ -57,6 +58,8 @@ class TabsWidget(Notebook,WidgetBuilder):
                 {
                     'id': 'frame_attributes',
                     'type': Frame,
+                    'properties': {
+                    },
                     'children': [
                         {
                             'id': 'text_attributes',

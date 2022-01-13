@@ -150,10 +150,12 @@ class WidgetBuilder():
             raise Exception(TYPE_NOT_FOUND_EXCEPTION)
 
     def __configure_position(self, id, configuration, components):
-        grid = configuration['grid'] if 'grid' in configuration else None
-        if grid is not None:
-            cleaned_properties = self.__clean_not_allowed_properties(id,grid, ALLOWED_GRID_PROPERTIES)
+        place_method = configuration['grid'] if 'grid' in configuration else None
+        if place_method is not None:
+            cleaned_properties = self.__clean_not_allowed_properties(id,place_method, ALLOWED_GRID_PROPERTIES)
             components[id].grid(cleaned_properties)
+        else:
+            components[id].pack()
 
     def __clean_not_allowed_properties(self,id, config, allowed_properties):
         formatted_data = {}

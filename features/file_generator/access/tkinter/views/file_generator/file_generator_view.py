@@ -17,7 +17,7 @@ class FileGeneratorView(Window, WidgetBuilder):
                     'grid': {
                         'row': 0,
                         'column': 0,
-                        'sticky': E+W
+                        # 'sticky': E+W,
                     }
                 },
 
@@ -38,16 +38,19 @@ class FileGeneratorView(Window, WidgetBuilder):
                             },
                             'children': [
                                 self.controller.create_panel_routes_configuration(
-                                    "Templates", None, 0),
+                                    "Templates", None, 0,'#234'),
                                 self.controller.create_panel_routes_configuration(
-                                    "Tokens", None, 1),
+                                    "Tokens", None, 1, '#564'),
                                 self.controller.create_panel_routes_configuration(
-                                    "Paths", None, 2)
+                                    "Paths", None, 2, '#20a')
                             ],
-                            'grid': {
-                                'row': 1,
-                                'column': 0,
-                                'sticky': N+S
+                            # 'grid': {
+                            #     'row': 0,
+                            #     'column': 0,
+                            #     'sticky': N+S
+                            # }
+                            'pack': {
+                                
                             }
                         },
                         {
@@ -58,16 +61,19 @@ class FileGeneratorView(Window, WidgetBuilder):
                                     'type': Button,
                                     'properties': {
                                         'command': self.controller.generate_files,
-                                        'text': "Generate"
+                                        'text': "Generate",
+                                        'bg': '#099',
+                                        'fg': 'white'
                                     },
                                     'grid': {}
                                 }
                             ],
-                            'grid': {
-                                'column': 0,
-                                'row': 0,
-                                'pady': 10
-                            }
+                            # 'grid': {
+                            #     'column': 0,
+                            #     'row': 1,
+                            #     'pady': 10
+                            # }
+                            'pack': {}
                         }
                     ]
                 }

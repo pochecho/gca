@@ -34,3 +34,10 @@ class CodeGeneratorUseCase:
     def __init__(self,token_extractor):
         self.token_extractor = token_extractor
 
+    def get_upper_camel_content(self, text):
+        fragments = text.split('-')
+        return fragments[0].capitalize() + ''.join([x.capitalize() for x in fragments[1:]])
+    
+    def get_lower_camel_content(self, text):
+        fragments = text.split('-')
+        return fragments[0].lower() + ''.join([x.capitalize() for x in fragments[1:]])
