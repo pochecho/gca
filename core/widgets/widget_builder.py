@@ -20,6 +20,7 @@ ALLOWED_PROPERTIES_BY_COMPONENT = {
         'activebackground',
         'activeforeground',
         'bg',
+        'background',
         'bd',
         'command',
         'fg',

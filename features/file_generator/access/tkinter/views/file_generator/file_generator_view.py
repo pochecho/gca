@@ -63,7 +63,7 @@ class FileGeneratorView(Window, WidgetBuilder):
                                         'command': self.controller.generate_files,
                                         'text': "Generate",
                                         'bg': '#099',
-                                        'fg': 'white'
+                                        'fg': 'black'
                                     },
                                     'grid': {}
                                 }

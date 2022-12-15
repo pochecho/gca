@@ -54,7 +54,7 @@ class FileGeneratorController:
                         'text': text,
                         'command': functions[index],
                         'bg': color,
-                        'fg': 'white',
+                        'fg': 'black',
                         'height': '1'
                     },
                     'grid':{
@@ -107,7 +107,7 @@ class FileGeneratorController:
         for f in self.sv_files.keys():
             text = (self.files[f].split(
                 '/').pop())
-            Checkbutton(canvas, text=text, variable=self.sv_files[f], bg=color).grid(
+            Checkbutton(canvas, text=text, variable=self.sv_files[f], bg=color, fg='black').grid(
                 row=row, column=column, sticky=W)
             row += 1
             if(max_row == row):

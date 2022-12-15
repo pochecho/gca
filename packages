@@ -1,2 +1,3 @@
 pyclean==2.0.0
 reorder-python-imports==2.5.0
+pyinstaller==5.7.0

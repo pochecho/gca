@@ -52,7 +52,7 @@ class LeftPanelWidget(Frame,WidgetBuilder):
                                 'width': 10,
                                 'text': 'Eval',
                                 'command' : self.validate_json,
-                                'fg': 'white',
+                                'fg': 'black',
                                 'bg': '#900'
                             },
                             'grid': {
