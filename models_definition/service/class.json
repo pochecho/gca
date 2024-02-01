@@ -1,0 +1,7 @@
+{
+  "name": "service",
+  "plural-name": "services",
+  "company": "Fare",
+  "table": "services",
+  "imports": ["java.lang.String", "java.util.Date", "java.util.List"]
+}

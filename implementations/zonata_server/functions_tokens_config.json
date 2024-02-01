@@ -1,6 +1,0 @@
-{
-	"Folder": "self.content = self.content.replace(\"{[Folder]}\",model.p('folder'))\n",
-	"NameWidgetTypeFile": "self.content = self.content.replace(\"{[NameWidgetTypeFile]}\",model.p('widget-name'))\n",
-	"NameModelTypeFile": "_name = model.p('name').lower()\nself.content = self.content.replace(\"{[NameModelTypeFile]}\",_name)\n",
-	"ModelBasicViewModel": "self.content = self.content.replace(\"{[ModelBasicViewModel]}\",'Ajáaaaaaa')\n"
-}

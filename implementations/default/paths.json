@@ -1,0 +1,10 @@
+{
+  "Get{[NameModelPluralTypeClass]}UseCase.java": "main/domain/usecases/src/get{[NameModelPluralTypeClass]}UseCase",
+  "Get{[NameModelPluralTypeClass]}UseCaseImpl.java": "main/domain/usecases/src/get{[NameModelPluralTypeClass]}UseCase",
+  "Get{[NameModelPluralTypeClass]}Param.java": "main/domain/usecases/src/get{[NameModelPluralTypeClass]}UseCase",
+  "{[NameModelTypeClass]}Adapter.java": "main/infrastructure/driven-adapter/repository/src/{[NameModelTypeFile]}",
+  "{[NameModelTypeClass]}Gateway.java": "main/domain/entities/src/{[NameModelTypeFile]}",
+  "{[NameModelTypeClass]}DAO.java": "main/infrastructure/driven-adapter/repository/src/{[NameModelTypeFile]}",
+  "{[NameModelTypeClass]}Repository.java": "main/infrastructure/driven-adapter/repository/src/{[NameModelTypeFile]}",
+  "{[NameModelTypeClass]}Entity.java": "main/domain/entities/src/{[NameModelTypeFile]}"
+}

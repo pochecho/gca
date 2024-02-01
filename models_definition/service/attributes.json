@@ -1,0 +1,57 @@
+[
+  {
+    "name": "id",
+    "column-name": "id",
+    "type": "String"
+  },
+  {
+    "name": "client-id",
+    "column-name": "client_id",
+    "type": "String"
+  },
+  {
+    "name": "employee-ids",
+    "column-name": "employee_ids",
+    "type": "List<String>"
+  },
+  {
+    "name": "date",
+    "column-name": "date",
+    "type": "Date"
+  },
+  {
+    "name": "inner-observations",
+    "column-name": "inner_observations",
+    "type": "String"
+  },
+  {
+    "name": "employee-observations",
+    "column-name": "employee_observations",
+    "type": "String"
+  },
+  {
+    "name": "cost",
+    "column-name": "cost",
+    "type": "float"
+  },
+  {
+    "name": "status",
+    "column-name": "status",
+    "type": "String"
+  },
+  {
+    "name": "financial-status",
+    "column-name": "financial_status",
+    "type": "String"
+  },
+  {
+    "name": "initial-hour",
+    "column-name": "initial_hour",
+    "type": "float"
+  },
+  {
+    "name": "final-hour",
+    "column-name": "final_hour",
+    "type": "float"
+  }
+]

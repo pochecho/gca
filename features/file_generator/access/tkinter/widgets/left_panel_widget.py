@@ -1,154 +1,255 @@
-from tkinter import Frame, StringVar, Entry, Button
+from tkinter import (
+    BOTH,
+    BOTTOM,
+    CENTER,
+    E,
+    END,
+    LEFT,
+    RIGHT,
+    TOP,
+    Y,
+    Frame,
+    Label,
+    StringVar,
+    Entry,
+    Button,
+    Text,
+)
 from tkinter import W
-from tkinter import N
+from tkinter import N, S
 import json
 from features.file_generator.access.tkinter.widgets.tabs_widget import TabsWidget
 from core.widgets.widget_builder import WidgetBuilder
 
-class LeftPanelWidget(Frame,WidgetBuilder):
-    name = 'LeftPanelWidget'
+
+class ModelConfigWidget(Frame, WidgetBuilder):
+    name = "LeftPanelWidget"
+
     def __init__(self, master=None, cnf={}, **kw):
         Frame.__init__(self)
-        WidgetBuilder.__init__(self)
+        WidgetBuilder.__init__(self, cnf)
         self.status_var = StringVar()
+        self.__name__ = "Frame"
+
         self._build()
         self._init_components()
 
     def _build(self):
         template = {
-            'type':Frame,
-            'properties': {
+            "type": Frame,
+            "pack": {
+                "side": TOP,
+                "expand": True,
+                "fill": Y,
             },
-            'children': [
+            "properties": {"bg": "green"},
+            "children": [
+                # {
+                #     "id": f"{self.name}.tab_widget",
+                #     "type": TabsWidget,
+                #     "pack": {
+                #         "side": BOTTOM,
+                #         "fill": BOTH,
+                #         "expand": True,
+                #     },
+                # },
                 {
-                    'id': '{}.main_widget'.format(self.name),
-                    'type': Frame,
-                    'grid':{
-                        'column': 0,
-                        'row': 0,
-                        'padx': 5,
-                        'pady': 5
+                    "id": "button_status_widget",
+                    "type": Frame,
+                    "pack": {
+                        "side": TOP,
+                        "fill": BOTH,
+                        "expand": False,
                     },
-                    'children': [
+                    "properties": {"bg": "green"},
+                    "children": [
                         {
-                            'id': 'status_widget',
-                            'type': Entry,
-                            'properties': {
-                                'textvariable': self.status_var,
-                                'width': 70
+                            "type": Button,
+                            "properties": {
+                                "textvariable": self.status_var,
+                                "width": 10,
+                                "text": "Evaluar",
+                                "command": self.validate_json,
+                                "fg": "black",
+                                "bg": "#900",
                             },
-                            'grid': {
-                                'column': 0,
-                                'row': 0,
-                                'padx': 5,
-                                'pady': 5
-                            }
+                            "pack": {
+                                "side": LEFT,
+                                "fill": BOTH,
+                                "expand": True,
+                            },
                         },
                         {
-                            'id': 'button_status_widget',
-                            'type': Button,
-                            'properties': {
-                                'textvariable': self.status_var,
-                                'width': 10,
-                                'text': 'Eval',
-                                'command' : self.validate_json,
-                                'fg': 'black',
-                                'bg': '#900'
+                            "id": "status_widget",
+                            "type": Entry,
+                            "properties": {
+                                "textvariable": self.status_var,
+                                "width": 50,
                             },
-                            'grid': {
-                                'column': 1,
-                                'row': 0,
-                                'padx': 5,
-                                'pady': 5
-                            }
-                        }
-
-                    ]
+                            "pack": {
+                                "side": RIGHT,
+                                "fill": BOTH,
+                                "expand": True,
+                            },
+                        },
+                    ],
                 },
                 {
-                    'id': '{}.tab_widget'.format(self.name),
-                    'type': TabsWidget,
-                    'grid':{
-                        'column': 0,
-                        'row': 1,
-                        'sticky': N
+                    "id": "seeeeetatus_widget",
+                    "type": Frame,
+                    "properties": {"bg": "purple"},
+                    "pack": {
+                        "side": BOTTOM,
+                        "expand": True,
+                        "fill": BOTH,
                     },
-
-                }
-               
+                    "children": [
+                        {
+                            "id": "class_container",
+                            "type": Frame,
+                            "pack": {
+                                "side": TOP,
+                                "expand": False,
+                                "fill": Y,
+                            },
+                            "children": [
+                                {
+                                    "type": Label,
+                                    "properties": {"text": "Clase"},
+                                    "pack": {
+                                        "side": TOP,
+                                        "expand": False,
+                                        "fill": BOTH,
+                                    },
+                                },
+                                {
+                                    "id": "text_class",
+                                    "type": Text,
+                                    "properties": {"height": 10},
+                                    "pack": {
+                                        "side": BOTTOM,
+                                        "expand": False,
+                                        "fill": BOTH,
+                                    },
+                                },
+                            ],
+                        },
+                        {
+                            "id": "attribute_container",
+                            "type": Frame,
+                            "properties": {"bg": "purple"},
+                            "pack": {
+                                "side": BOTTOM,
+                                "expand": True,
+                                "fill": Y,
+                            },
+                            "children": [
+                                {
+                                    "type": Label,
+                                    "properties": {"text": "Atributos"},
+                                    "pack": {
+                                        "side": TOP,
+                                        "expand": False,
+                                        "fill": BOTH,
+                                    },
+                                },
+                                {
+                                    "id": "text_attributes",
+                                    "type": Text,
+                                    "pack": {
+                                        "side": BOTTOM,
+                                        "expand": True,
+                                        "fill": BOTH,
+                                    },
+                                },
+                            ],
+                        },
+                    ],
+                },
             ],
-            'grid': {
-                'column': 0,
-                'row': 0,
-            }
         }
-        self.render(self,template)
+        self.render(self, template)
 
     def _init_components(self):
         self.init_values_json()
+
     def init_values_json(self):
         class_json = {
-                        "name": "vehicle",
-                        "name-plural": "vehicles",
-                        "display-name": "Vehículo",
-                        "folder": "vehicle",
-                        "widget-name": "layout-bds-widget"
-                    }
-        
-        attributes_json =[
-                    {
-                        "name":"brand",
-                        "display-name": "Marca",
-                        "is-required": False,
-                        "type": "string",
-                        "encapsulation": "private"
-                    },
-                    {
-                        "name":"model",
-                        "display-name": "Model",
-                        "is-required": False,
-                        "type": "string",
-                        "encapsulation": "private"
-                    },
-                    {
-                        "name":"color",
-                        "display-name": "Color",
-                        "is-required": False,
-                        "type": "string",
-                        "encapsulation": "private"
-                    }
-                ]
+            "name": "service",
+            "plural-name": "services",
+            "company": "Fare",
+            "table": "services",
+            "imports": ["java.lang.String", "java.util.Date", "java.util.List"],
+        }
 
-        
-        self.components['{}.tab_widget'.format(self.name)].set_value(1,json.dumps(attributes_json,indent=2))
-        self.components['{}.tab_widget'.format(self.name)].set_value(0,json.dumps(class_json,indent=2))
+        attributes_json = [
+            {"name": "id", "column-name": "id", "type": "String"},
+            {"name": "client-id", "column-name": "client_id", "type": "String"},
+            {
+                "name": "employee-ids",
+                "column-name": "employee_ids",
+                "type": "List<String>",
+            },
+            {"name": "date", "column-name": "date", "type": "Date"},
+            {
+                "name": "inner-observations",
+                "column-name": "inner_observations",
+                "type": "String",
+            },
+            {
+                "name": "employee-observations",
+                "column-name": "employee_observations",
+                "type": "String",
+            },
+            {"name": "cost", "column-name": "cost", "type": "float"},
+            {"name": "status", "column-name": "status", "type": "String"},
+            {
+                "name": "financial-status",
+                "column-name": "financial_status",
+                "type": "String",
+            },
+            {"name": "initial-hour", "column-name": "initial_hour", "type": "float"},
+            {"name": "final-hour", "column-name": "final_hour", "type": "float"},
+        ]
 
+        self.components["text_attributes"].delete("1.0", END)
+        self.components["text_attributes"].insert(
+            "1.0", json.dumps(attributes_json, indent=2)
+        )
+        self.components["text_class"].delete("1.0", END)
+        self.components["text_class"].insert("1.0", json.dumps(class_json, indent=2))
 
     def validate_json(self):
-        response = ''
-        index0 =  self.components['{}.tab_widget'.format(self.name)].get_value(0)
-        index1 =  self.components['{}.tab_widget'.format(self.name)].get_value(1)
+        response = ""
+        index1 = self.components["text_attributes"].get("1.0", END)
+        index0 = self.components["text_class"].get("1.0", END)
 
         try:
             response_json = json.loads(index0)
-            formated_json = json.dumps(response_json,indent=2)
-            self.components['{}.tab_widget'.format(self.name)].set_value(0,formated_json)
-        except Exception as identifier:
-            response += '0: '+str(identifier)
-        
+            formated_json = json.dumps(response_json, indent=2)
+            self.components["text_class"].delete("1.0", END)
 
+            self.components["text_class"].insert(
+                "1.0", formated_json
+            )
+        except Exception as identifier:
+            response += "Clase: " + str(identifier)
+            
         try:
             response_json = json.loads(index1)
-            formated_json = json.dumps(response_json,indent=2)
-            self.components['{}.tab_widget'.format(self.name)].set_value(1,formated_json)
-        except Exception as identifier:
-            response += '1: '+ str(identifier)
+            formated_json = json.dumps(response_json, indent=2)
+            self.components["text_attributes"].delete("1.0", END)
 
+            self.components["text_attributes"].insert(
+                "1.0", formated_json
+            )
+        except Exception as identifier:
+            response += "Atributos: " + str(identifier)
 
         self.status_var.set(response)
 
     def get_class_representation(self):
-        index0 =  json.loads(self.components['{}.tab_widget'.format(self.name)].get_value(0))
-        index1 =  json.loads(self.components['{}.tab_widget'.format(self.name)].get_value(1))
-        index0['attributes'] = index1
+        index0 = json.loads(self.components["text_class"].get("1.0", END))
+        index1 = json.loads(self.components["text_attributes"].get("1.0", END))
+        index0["attributes"] = index1
         return index0
